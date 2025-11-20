@@ -45,7 +45,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 
-- [ ] Web app implements pseudo-authentication
+- [X] Web app implements pseudo-authentication
   - Users can only edit and delete posts or delete comments by entering the secret key, which is set by the user during post creation
   - **or** upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them
   - For both options, only the original user author of a post can update or delete it
@@ -69,7 +69,14 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<div>
+    <a href="https://www.loom.com/share/b8758524d2394c98865f3d33d62bb326">
+      <p>gameme - 19 November 2025 - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/b8758524d2394c98865f3d33d62bb326">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/b8758524d2394c98865f3d33d62bb326-07f48270122a03c6-full-play.gif#t=0.1">
+    </a>
+  </div>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
