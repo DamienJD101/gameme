@@ -1,0 +1,181 @@
+/* src/Sidebar.css */
+
+.sidebar {
+  /* lock it on the left, full height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 300px;
+  
+  background: radial-gradient(circle at top, #030712 0%, #000 65%);
+  border-right: 2px solid #22d3ee;
+  border-radius: 0 28px 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding: 1.25rem 1.5rem 1.75rem;
+  /* Neon inner glow & outer rim */
+  box-shadow:
+    inset 0 0 12px rgba(255, 70, 90, 0.3),   /* reddish inner glow */
+    0 0 18px rgba(56, 189, 248, 0.35),       /* cyan outer glow */
+    0 0 0 2px rgba(56, 189, 248, 0.45);
+
+  z-index: 15;
+
+  /* NEW: maroon/red outer stroke like header */
+  outline: 2px solid #7f1d1d;
+  outline-offset: -4px;
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 0 30px rgba(56, 189, 248, 0.8);
+}
+
+/* === Logo block === */
+.sidebar__logo {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #7f1d1d;  /* red line */
+  margin-bottom: 1.2rem;
+}
+
+
+.sidebar__logo-inner {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  background: radial-gradient(circle at top, #111827 0%, #020617 60%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 2px rgba(15, 23, 42, 0.9),
+    0 0 30px rgba(168, 85, 247, 0.7);
+  overflow: hidden;
+}
+
+/* your PNG logo */
+.sidebar__logo-img {
+  width: 90%;
+  height: auto;
+  display: block;
+}
+
+/* If for some reason the text fallback is used */
+.sidebar__logo-text {
+  font-family: "Gameplay", system-ui, sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f9fafb;
+}
+
+/* === Nav === */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+  padding-left: 0.25rem;
+}
+
+.sidebar-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.65rem;
+
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: radial-gradient(circle at top, #020617, #020617);
+  color: #dd90f9;
+
+  font-family: "Gameplay", system-ui, sans-serif;
+  font-size: 1.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  text-align: left;
+
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 10px 24px rgba(0, 0, 0, 0.6);
+  transition:
+    background 140ms ease-out,
+    transform 120ms ease-out,
+    box-shadow 140ms ease-out,
+    border-color 140ms ease-out;
+}
+
+.sidebar-item__bullet {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.sidebar-item__label {
+  font-family: "Gameplay", monospace;   /* same font as title */
+  letter-spacing: 0.08em;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fad648;
+  
+  
+}
+
+
+/* Hover */
+.sidebar-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(248, 250, 252, 0.9);
+  box-shadow:
+    0 0 0 1px rgba(148, 163, 184, 0.9),
+    0 12px 26px rgba(15, 23, 42, 0.9);
+}
+
+/* Active tab */
+.sidebar-item--active {
+  background: linear-gradient(90deg, #1e40af, #06b6d4);
+  border-radius: 12px;
+
+  /* A glowing outline effect */
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.6),
+    0 0 0 2px rgba(56, 189, 248, 0.9);
+}
+
+
+/* === Footer "Press Start" === */
+.sidebar__footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(30, 64, 175, 0.7);
+}
+
+.sidebar__footer-text {
+  display: block;
+  font-family: "Gameplay", system-ui, sans-serif;
+  font-size: 1.95rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  text-align: left;
+  text-shadow:
+    0 0 6px rgba(56, 189, 248, 0.7),
+    0 0 12px rgba(56, 189, 248, 0.4);
+
+  /* retro blinking animation */
+  animation: pressstart-blink 1.1s steps(2, start) infinite;
+}
+
+@keyframes pressstart-blink {
+  0%, 49% {
+    opacity: 0.35;
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+}

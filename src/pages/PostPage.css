@@ -1,0 +1,342 @@
+/* src/pages/PostPage.css */
+
+.post-page {
+  padding: 2.5rem 2.75rem;
+  color: #e5e7eb;
+  font-family: "Gameplay", system-ui, sans-serif;
+  max-width: 1200px;          /* 👈 keep content in a band */
+  margin: 0 auto;             /* 👈 center under the hero */
+}
+
+.post-page__back-btn {
+  margin-bottom: 1rem;
+  background: transparent;
+  border: none;
+  color: #93c5fd;
+  cursor: pointer;
+  font-size: 1.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.post-page__main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.post-page__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 420px;
+}
+
+.post-page__upvote-btn {
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(251, 191, 36, 0.8);
+  background: radial-gradient(circle at top, #111827, #020617);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #fed7aa;
+}
+
+.post-page__title {
+  font-size: 2.4rem;
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.post-page__meta {
+  font-size: 2.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #9ca3af;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.post-page__meta-label {
+  color: #e5e7eb;
+}
+
+.post-page__meta-line {
+  margin: 0 0 0.2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fcfafa;
+}
+
+.post-page__description {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #e5e7eb;
+}
+
+.post-page__actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-page__action-btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(129, 140, 248, 0.8);
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+.post-page__action-btn--danger {
+  border-color: rgba(248, 113, 113, 0.85);
+  color: #fecaca;
+}
+
+.post-page__action-btn--secondary {
+  border-color: rgba(148, 163, 184, 0.8);
+}
+
+/* Edit form */
+.post-page__edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post-page__edit-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.post-page__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.post-page__field input,
+.post-page__field textarea {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 8px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  padding: 0.45rem 0.6rem;
+  font-size: 0.8rem;
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+
+.post-page__input {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: radial-gradient(circle at top, #020617, #020617 60%, #020617 100%);
+  padding: 0.6rem 0.9rem;
+  color: #e5e7eb;
+  font-size: 1.9rem;
+}
+
+.post-page__input--body {
+  border-radius: 16px;
+  resize: vertical;
+}
+
+.post-page__field textarea {
+  resize: vertical;
+}
+
+/* Comments */
+.post-page__section-title {
+  margin: 0 0 0.6rem;
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgb(252, 221, 45);
+}
+
+.post-page__content {
+  width: 100%;
+}
+
+.post-page__comments {
+  margin-top: 2.5rem;
+  max-width: 900px;
+}
+
+.post-page__comments-title {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.post-page__comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.post-page__comment {
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  background: radial-gradient(circle at top, #020617, #020617 70%, #020617 100%);
+  box-shadow: 0 0 0 1px rgba(30, 64, 175, 0.6);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.post-page__comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+.post-page__comment-author {
+  color: #a5b4fc;
+}
+
+.post-page__comment-date {
+  color: #6b7280;
+}
+
+.post-page__date {
+  margin: 0 0 0.75rem;
+  font-size: 1.8rem;
+  color: #f7f6f7;
+  
+}
+
+.post-page__comment-body {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.post-page__comment-form {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post-page__comment-submit {
+  align-self: flex-start;
+  border-radius: 14px;
+  padding: 0.5rem 1.6rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #ff0099 0%, #ffae00 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 12px rgba(255, 0, 153, 0.6),
+    0 0 22px rgba(255, 174, 0, 0.5);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.post-page__comment-submit:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 16px rgba(255, 0, 153, 0.9),
+    0 0 26px rgba(255, 174, 0, 0.8);
+}
+
+.post-page__comment-submit:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+
+.post-page--loading,
+.post-page--missing {
+  padding: 2rem;
+  color: #e5e7eb;
+}
+
+.post-page__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 2fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.post-page__user {
+  color: #a5b4fc;
+}
+
+.post-page__dot {
+  margin: 0 0.2rem;
+  opacity: 0.7;
+}
+
+.post-page__like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 113, 113, 0.8);
+  background: radial-gradient(circle at top, #111827, #020617);
+  cursor: pointer;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fecaca;
+}
+
+.post-page__heart {
+  width: 6px;
+  height: 6px;
+  background: #fb7185;
+  box-shadow:
+    6px 0 #fb7185,
+    12px 0 #fb7185,
+    -3px 6px #fb7185,
+    3px 6px #fb7185,
+    9px 6px #fb7185,
+    15px 6px #fb7185,
+    -3px 12px #fb7185,
+    3px 12px #fb7185,
+    9px 12px #fb7185,
+    15px 12px #fb7185,
+    3px 18px #fb7185,
+    9px 18px #fb7185,
+    6px 24px #fb7185;
+  transform: scale(0.7);
+}
+
+.post-page__delete-btn {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: radial-gradient(circle at top, #0b1120, #020617);
+  color: #e5e7eb;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+

@@ -1,0 +1,106 @@
+/* === GameMe Retro Font: Gameplay === */
+@font-face {
+  font-family: "Gameplay";
+  src: url("/src/fonts/Gameplay.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Optional secondary retro font for later (menus, body, etc.)
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+*/
+
+:root {
+  /* ===== FONT FAMILY ===== */
+  --font-display: "Gameplay", system-ui, sans-serif;  /* Titles, logo */
+  --font-ui: "Gameplay", system-ui, sans-serif;       /* Navigation, buttons */
+  --font-body: system-ui, sans-serif;                 /* Body text */
+  --font-mono: "VT323", monospace;
+
+  /* ===== GLOBAL FONT SIZES ===== */
+  --font-h1-size: 1.6rem;      /* Page titles */
+  --font-h2-size: 1.25rem;     /* Section titles */
+  --font-h3-size: 1.1rem;      /* Sub-sections */
+  --font-body-size: 0.95rem;   /* Regular text */
+  --font-small-size: 0.8rem;   /* Labels, metadata */
+  --font-tiny-size: 0.7rem;    /* Tiny text */
+
+  /* ===== SIDEBAR LAYOUT ===== */
+  --sidebar-width: 430px;       /* ← WIDEN SIDEBAR HERE */
+  --sidebar-padding: 24px;      /* ← OUTER PADDING */
+  --sidebar-item-height: 75px;  /* ← BUTTON HEIGHT */
+
+  /* ===== SIDEBAR FONT SIZES ===== */
+  --sidebar-title-size: 3.70rem;
+  --sidebar-title-spacing: 0.18em;
+
+  --sidebar-item-font-size: 1.45rem;
+  --sidebar-item-spacing: 0.20em;
+
+  --sidebar-tagline-size: 1.95rem;
+  --sidebar-tagline-spacing: 0.25em;
+
+  /* ===== BUTTONS / CARDS ===== */
+  --button-font-size: 0.85rem;
+  --input-font-size: 0.85rem;
+  --card-title-size: 1rem;
+  --card-meta-size: 0.8rem;
+
+  /* ===== COLORS ===== */
+  --page-bg: #040712;
+  --page-bg-noise: radial-gradient(circle at top, #202744 0, transparent 55%);
+  --sidebar-bg: linear-gradient(135deg, #050817 0%, #050816 60%, #0f172a 100%);
+
+  --color-accent: #ffcc00;
+  --color-accent-soft: #ffe680;
+  --color-pink: #ff2e92;
+  --color-cyan: #30f2ff;
+
+  --text-main: #f9fbf9;
+  --text-muted: #9ca3af;
+
+  /* ===== PIXEL BORDERS ===== */
+  --pixel-border-outer: #30f2ff;
+  --pixel-border-inner: #ff2e92;
+  --pixel-shadow: #000000;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  color: var(--text-main);
+  background-color: var(--page-bg);
+  background-image: var(--page-bg-noise);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* Default links */
+a {
+  color: var(--color-accent-soft);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbar slight retro tweak (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020308;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+

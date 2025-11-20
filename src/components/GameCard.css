@@ -1,0 +1,186 @@
+/* src/components/GameCard.css */
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  max-width: 360px;
+
+  /* Keeps spacing consistent under each frame */
+  padding: 0 0.5rem 0.25rem;
+}
+
+/* The metadata block under the frame */
+.game-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+  
+  font-family: "Gameplay", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #e5e7eb;
+}
+
+/* Title line */
+.game-card__title {
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  text-decoration: underline;
+  
+}
+
+/* Generic text line */
+.game-card__line {
+  margin: 0;
+  font-size: 0.70rem;
+  line-height: 1.1;
+}
+
+/* Game name – slightly brighter */
+.game-card__game {
+  color: #fefce8;
+}
+
+/* Username */
+.game-card__user {
+  color: #8095fd;
+}
+
+/* Location / platform row */
+.game-card__detail {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #9ca3af;
+  font-size: 0.78rem;
+}
+
+.game-card__detail-item {
+  white-space: nowrap;
+}
+
+.game-card__dot {
+  opacity: 0.7;
+}
+
+/* Footer: chip, date, like button on a single line */
+.game-card__footer {
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Platform chip */
+.game-card__chip {
+  font-size: 0.rem;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  color: #020617;
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.8),
+    0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+/* Date label: "NOV 2025" */
+.game-card__date {
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+/* Like button with pixel heart */
+.game-card__like {
+  margin-left: auto; /* push to the right */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 113, 113, 0.8);
+  background: radial-gradient(circle at top, #111827, #020617);
+  cursor: pointer;
+
+  font-size: 0.69rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fecaca;
+
+  box-shadow:
+    0 0 10px rgba(248, 113, 113, 0.4),
+    0 0 0 1px rgba(15, 23, 42, 0.8);
+
+  transition:
+    transform 100ms ease-out,
+    box-shadow 120ms ease-out,
+    background 120ms ease-out;
+}
+
+.game-card__like:hover {
+  transform: translateY(-1px);
+  background: radial-gradient(circle at top, #b91c1c, #020617);
+  box-shadow:
+    0 0 16px rgba(248, 113, 113, 0.7),
+    0 0 0 1px rgba(248, 250, 252, 0.5);
+}
+
+.game-card__like:active {
+  transform: translateY(0);
+}
+
+/* Pixel heart – simple 8-bit style using box-shadow */
+.game-card__heart {
+  width: 6px;
+  height: 6px;
+  background: #fb7185; /* base pixel */
+  box-shadow:
+    /* top row */
+    6px 0 #fb7185,
+    12px 0 #fb7185,
+    /* second row */
+    -3px 6px #fb7185,
+    3px 6px #fb7185,
+    9px 6px #fb7185,
+    15px 6px #fb7185,
+    /* third row */
+    -3px 12px #fb7185,
+    3px 12px #fb7185,
+    9px 12px #fb7185,
+    15px 12px #fb7185,
+    /* fourth row */
+    3px 18px #fb7185,
+    9px 18px #fb7185,
+    /* fifth row */
+    6px 24px #fb7185;
+  transform: scale(0.7);
+}
+
+.game-card__likes {
+  min-width: 1.4rem;
+  text-align: right;
+}
+
+/* Increase metadata text size slightly */
+.game-card__line {
+  font-size: 0.78rem; /* was 0.70 */
+}
+
+.game-card__title-button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+
+.game-card__title-button:hover {
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+}

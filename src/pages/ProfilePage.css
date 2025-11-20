@@ -1,0 +1,124 @@
+/* ======================
+   GENERAL LAYOUT
+====================== */
+.profile-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.profile-card {
+  background: rgba(20, 20, 40, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2rem 3rem;
+  width: 100%;
+  max-width: 540px;
+
+  box-shadow:
+    0 0 20px rgba(140, 90, 255, 0.45),
+    0 0 40px rgba(255, 120, 240, 0.25);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ======================
+   AVATAR & NAME
+====================== */
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.profile-avatar img {
+  width: 280px;
+  height: auto;
+  image-rendering: pixelated;
+  border-radius: 12px;
+  box-shadow:
+    0 0 18px rgba(255, 100, 200, 0.4),
+    0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.profile-name {
+  font-family: "Gameplay", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fefefe;
+  margin: 0;
+}
+
+.profile-handle {
+  text-align: center;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: #a5b4fc;
+}
+
+/* ======================
+   INFO SECTION
+====================== */
+.profile-info {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-label {
+  font-size: 1rem;
+  color: #93c5fd;
+  letter-spacing: 0.08em;
+}
+
+.info-value {
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+.info-chip {
+  padding: 0.25rem 0.6rem;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  color: #020617;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ======================
+   BIO SECTION
+====================== */
+.profile-bio {
+  margin-top: 2.3rem;
+  color: #e5e7eb;
+}
+
+.profile-bio h2 {
+  color: #fefefe;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "Gameplay", sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+.profile-bio p {
+  line-height: 1.5;
+  font-size: 1.3rem;
+  white-space: pre-line;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
